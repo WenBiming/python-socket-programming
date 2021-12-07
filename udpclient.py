@@ -3,6 +3,7 @@ import time
 import sys
 import statistics
 
+
 def clientOf(ip=None):
     if ip is None:
         ip = '127.0.0.1'
@@ -21,6 +22,7 @@ def clientOf(ip=None):
     # Send to server using created UDP socket
 
     rttList = []
+
 
     for x in range(10):
         t1 = time.perf_counter()
