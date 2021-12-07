@@ -23,6 +23,7 @@ print("socket is listening")
 
 # a forever loop until we interrupt it or
 # an error occurs
+
 while True:
     # Establish connection with client.
     c, addr = s.accept()
