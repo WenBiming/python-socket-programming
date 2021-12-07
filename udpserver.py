@@ -1,10 +1,11 @@
 import socket
 
+
 ip = '127.0.0.1'
 port = 20001
 buffersize = 1024
 
-msgFromServer = 'hello udp client'
+msgFromServer = 'This is upd server speaking'
 bytesToSend = str.encode(msgFromServer)
 s = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 s.bind((ip, port))
