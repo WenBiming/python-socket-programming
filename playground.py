@@ -1,7 +1,6 @@
-import struct
-import time
+f = open('file.txt')
+print(type(f), f)
+content = []
 
-
-sending_ts = time.time()
-payload = struct.pack('!d', sending_ts)
-print(type(payload), payload)
+for x in f:
+    print(x)
