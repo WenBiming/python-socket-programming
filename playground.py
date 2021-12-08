@@ -1,6 +1,8 @@
-f = open('file.txt')
-print(type(f), f)
-content = []
+message = b'file.txt'
 
+f = open(str(message))
 for x in f:
     print(x)
+
+
+

@@ -7,10 +7,9 @@ def handle_client(client_socket):
     print('recieve {} from {}\n'.format(message, address))
     
     try:
-        f = open(str(message))
+        f = open(message)
         for x in f:
-            # client_socket.send(x.encode())
-            print(x)
+            client_socket.send(x.encode())
     except FileNotFoundError:
         client_socket.send('file not found in server'.encode())
     
@@ -36,6 +35,7 @@ def serverOf():
         
         client_handler = threading.Thread(target=handle_client, args=(client,))
         client_handler.start()
+        print('there is %d clients running\n' % threading.active_count() )
         
 
 if __name__ == '__main__':
